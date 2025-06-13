@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Input Form Example</title>
+</head>
+<body>
+
+  <form onsubmit="showAlert(event)">
+    <label for="userInput">Enter something:</label>
+    <input type="text" id="userInput" placeholder="Type here..." required>
+    <button type="submit">Click Me</button>
+  </form>
+
+  <script>
+    function showAlert(event) {
+      event.preventDefault(); // Prevent form from submitting and reloading the page
+      const inputValue = document.getElementById("userInput").value;
+      alert("You entered: " + inputValue);
+    }
+  </script>
+
+</body>
+</html>
